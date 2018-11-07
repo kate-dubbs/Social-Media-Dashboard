@@ -281,7 +281,7 @@ In order to leverage the data stored in S3, QuickSight is going to use Athena to
 2. Click on **Databases** on the left side and **Add database**. Name the database as lab_analyzed_tweets and click **Create**.
 3. In order to create the tables, AWS Glue uses a Crawler. Click on **Crawlers** , then on **Add crawler**.
 4. Name the crawler tweets_crawler and click **Next**.
-5. Select **S3** as the data store and introduce s3://yourbucketname in the **Include path** field. Click **Next** twice.
+5. Select **S3** as the data store and use s3://lab-analyzed-tweets-yourname in the **Include path** field. Click **Next** twice.
 6. Select **Create an IAM role** and add a suffix to the name such as lab-tweets-analysis. Click **Next** twice.
 7. Select the lab_analyzed_tweets table click **Next**.
 8. Click **Finish**.
@@ -348,6 +348,7 @@ QuickSight works with data sets that you define and can come from several differ
 10. To make the field names look nicer, it is worth to rename the table name suffix from the fields that are selected. For that, click on the down arrow at the right side of the field name and then on **Rename field** and remove the [tablename] part of the name, then click **Apply**. Do this for tweet_date_, tweet_text_ and tweet_id_.
 11. Click on **Save & visualize**.
 12. Start exploring visualizations by clicking on the fields on the left side!
+13. Example dashboards can be found here: https://aws.amazon.com/blogs/machine-learning/build-a-social-media-dashboard-using-machine-learning-and-bi-services/
 
 You can also create single-table data sets by, in step 4, clicking on the **Select** button.
 

@@ -25,7 +25,7 @@ First you need to configure your AWS Cloud9 environment: https://github.com/awsl
 
 In a AWS Cloud9, execute the following command in the terminal window:
 
-```sudo pip install tweepy boto3```
+```sudo pip install tweepy boto3 awscli```
 
 # Create a Kinesis Data Stream
 

@@ -41,7 +41,7 @@ Using a Kinesis Data Stream, you will continuously stream records to be consumed
 In this step, you create a simple producer that runs within the AWS Cloud9 environment. This producer listens to new tweets using [Tweepy](http://www.tweepy.org/), an easy-to-use Python library for accessing the Twitter API. In order to improve the efficiency of the producer, it buffers the incoming tweets in small batches and sends them to the Kinesis Data Stream using the _put_records_method of the Kinesis API. Another solution, better fitting for high-throughput, more efficient environments, could be to use the [Kinesis Producer Library](https://docs.aws.amazon.com/streams/latest/dev/developing-producers-with-kpl.html) (KPL), an easy-to-use, highly configurable library that helps you write to a Kinesis data stream. It acts as an intermediary between your producer application code and the Kinesis Data Streams API actions.
 
 1. [YOU CAN SKIP THIS STEP IF TWITTER KEYS HAVE BEEN PROVIDED] Create a Twitter read-only application, as described [here](http://docs.inboundnow.com/guide/create-twitter-application/). Take note of the consumer key, consumer secret, OAuth access token, and OAuth access token secret.
-2. In AWS Cloud9 click Create File
+2. In AWS Cloud9 create a new file
 3. Paste the following code and substitute the place holders (<placeholder>) with the appropriate consumer key, consumer secret, OAuth access token, OAuth access token secret, and the stream name used in the previous step. When done click Save as and name your file twitter_to_kinesis.py
 ```
 #! /usr/bin/python
